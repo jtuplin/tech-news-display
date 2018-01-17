@@ -13,6 +13,7 @@ window.configure(bg='white')
 window.attributes("-fullscreen",True)
 window.title("Random Fact")
 
+update = 60 Update Delay
 
 frame= Frame(bg='white')
 frame.place(in_=window, anchor="c", relx=.50, rely=.50)
@@ -23,8 +24,8 @@ newshead = Label(frame,text="Latest Technology News:",font=("Ariel",80),bg='whit
 class newsRow:
     
     def __init__(self,window,startRow):
-        headsize = 20
-        dessize = 15
+        headsize = 17
+        dessize = 12
         self.hl = Label(frame,bg='white',font=("Ariel",headsize),wrap='900')
         self.hl.grid(row=startRow,column=0,sticky=W+E+N)
         self.hr = Label(frame,bg='white',font=("Ariel",headsize),wrap='900')
@@ -48,8 +49,8 @@ othernewstitle=Label(frame,text="In Other News:",font=("Ariel",50),bg='white').g
 
 class otherNews:
     def __init__(self,frame,startRow):
-        headsize = 20
-        dessize = 15
+        headsize = 17
+        dessize = 12
 
         self.ohl = Label(frame,bg='white',font=("Ariel",headsize),wrap='900')
         self.ohr = Label(frame,bg='white',font=("Ariel",headsize),wrap='900')
@@ -128,9 +129,9 @@ def update():
     fact.newFact(frame)
     info.update()
     
-    window.after(15000,update)
+    window.after(delay,update*1000)
     
 
-window.after(15000,update)
+window.after(delay,update*1000)
 
 window.mainloop()
