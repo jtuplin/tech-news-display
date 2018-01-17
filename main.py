@@ -13,6 +13,7 @@ window.configure(bg='white')
 window.attributes("-fullscreen",True)
 window.title("Random Fact")
 
+delay = 60 #Update delay
 
 frame= Frame(bg='white')
 frame.place(in_=window, anchor="c", relx=.50, rely=.50)
@@ -128,9 +129,9 @@ def update():
     fact.newFact(frame)
     info.update()
     
-    window.after(15000,update)
+    window.after(delay*1000,update)
     
 
-window.after(15000,update)
+window.after(delay*1000,update)
 
 window.mainloop()
