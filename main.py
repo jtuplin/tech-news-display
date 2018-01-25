@@ -18,7 +18,7 @@ delay = 60 #Update Delay
 frame= Frame(bg='white')
 frame.place(in_=window, anchor="c", relx=.50, rely=.50)
 
-newshead = Label(frame,text="Latest Technology News:",font=("Ariel",80),bg='white').grid(column=0,row=0,columnspan=2,sticky=N+E+W)
+newshead = Label(frame,text="Latest Technology News:",font=("Ariel",70),bg='white').grid(column=0,row=0,columnspan=2,sticky=N+E+W)
 
 
 class newsRow:
@@ -26,14 +26,14 @@ class newsRow:
     def __init__(self,window,startRow):
         headsize = 17
         dessize = 12
-        self.hl = Label(frame,bg='white',font=("Ariel",headsize),wrap='900')
+        self.hl = Label(frame,bg='white',font=("Ariel",headsize),wrap='750')
         self.hl.grid(row=startRow,column=0,sticky=W+E+N)
-        self.hr = Label(frame,bg='white',font=("Ariel",headsize),wrap='900')
+        self.hr = Label(frame,bg='white',font=("Ariel",headsize),wrap='750')
         self.hr.grid(row=startRow,column=1,sticky=W+E+N)
 
-        self.dl = Label(frame,bg='white',font=("Ariel",dessize),wrap='900')
+        self.dl = Label(frame,bg='white',font=("Ariel",dessize),wrap='750')
         self.dl.grid(row=startRow+1,column=0,sticky=W+E+N,padx=15,pady=15)
-        self.dr = Label(frame,bg='white',font=("Ariel",dessize),wrap='900')
+        self.dr = Label(frame,bg='white',font=("Ariel",dessize),wrap='750')
         self.dr.grid(row=startRow+1,column=1,sticky=W+E+N,padx=15,pady=15)
 
     def update(self,startNews):
@@ -52,10 +52,10 @@ class otherNews:
         headsize = 17
         dessize = 12
 
-        self.ohl = Label(frame,bg='white',font=("Ariel",headsize),wrap='900')
-        self.ohr = Label(frame,bg='white',font=("Ariel",headsize),wrap='900')
-        self.odl = Label(frame,bg='white',font=("Ariel",dessize),wrap='900')
-        self.odr  = Label(frame,bg='white',font=("Ariel",dessize),wrap='900')
+        self.ohl = Label(frame,bg='white',font=("Ariel",headsize),wrap='750')
+        self.ohr = Label(frame,bg='white',font=("Ariel",headsize),wrap='750')
+        self.odl = Label(frame,bg='white',font=("Ariel",dessize),wrap='750')
+        self.odr  = Label(frame,bg='white',font=("Ariel",dessize),wrap='750')
 
         self.ohl.grid(row=startRow,column=0,sticky=W+E+N)
         self.ohr.grid(row=startRow,column=1,sticky=W+E+N)
