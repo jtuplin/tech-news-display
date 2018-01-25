@@ -26,7 +26,7 @@ class newsRow:
     def __init__(self,window,startRow):
         headsize = 17
         dessize = 12
-        self.hl = Label(frame,bg='white',font=("Ariel",headsize),S)
+        self.hl = Label(frame,bg='white',font=("Ariel",headsize),wrap='650')
         self.hl.grid(row=startRow,column=0,sticky=W+E+N)
         self.hr = Label(frame,bg='white',font=("Ariel",headsize),wrap='650')
         self.hr.grid(row=startRow,column=1,sticky=W+E+N)
